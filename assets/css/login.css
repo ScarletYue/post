@@ -1,0 +1,114 @@
+/* CSS cho toàn bộ trang */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e8e0ff, #c8b5ff);
+}
+
+/* Thêm keyframes cho hiệu ứng chuyển động của container */
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Áp dụng hiệu ứng cho container */
+.container12 {
+    width: 50%;
+    margin: 20px auto;
+    background-color: rgba(80, 48, 139, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #3d0d86;
+    animation: slideInDown 0.5s ease-out;
+}
+
+.container12:hover {
+    box-shadow: 0 0 30px #6434a3; /* Hiệu ứng sáng khi hover */
+}
+
+.dk {
+    font-weight: bolder;
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 0 0 10px #e1bee7, 0 0 20px #8a68c8; 
+    transition: color 0.3s;
+}
+
+.dk:hover {
+    color: #d3bee7;
+}
+
+.label {
+    margin-top: 5%;
+    font-weight: bold;
+    font-size: 20px;
+    color: #d0bee7;
+}
+
+.text, .password, .date, .email, .textarea, .select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #d1c4e9;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff; 
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s, background-color 0.3s; 
+    box-shadow: 0 0 5px rgba(103, 58, 183, 0.2);
+}
+
+.text:hover, .password:hover, .date:hover, .email:hover, .textarea:hover, .select:hover {
+    transform: scale(1.05); 
+    background-color: #f3e5f5; 
+    border-color: #b39ddb; 
+    box-shadow: 0 0 8px rgba(103, 58, 183, 0.4);
+}
+
+.text:focus, .password:focus, .date:focus, .email:focus, .textarea:focus, .select:focus {
+    border-color: #9575cd; 
+    outline: none;
+    box-shadow: 0 0 12px rgba(103, 58, 183, 0.6);
+}
+
+.submit {
+    width: calc(50% - 20px);
+    background-color: #29006b;
+    color: #ffffff;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit:hover {
+    background-color: #cdb2fb;
+    box-shadow: 0 0 10px #ede2ff;
+}
+
+.snowflake {
+    position: fixed;
+    top: -10px;
+    z-index: 9999;
+    user-select: none;
+    pointer-events: none;
+    color: #cebee7;
+    font-size: 24px;
+    animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-100vh) translateX(0); }
+    100% { transform: translateY(100vh) translateX(15vw); }
+}

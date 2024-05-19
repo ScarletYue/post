@@ -1,0 +1,178 @@
+/* Thiết lập chung */
+.container {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    font-size: 50px;
+    font-weight: bold;
+    color: #270071;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInDown 1s ease-out;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 5%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #6a1b9a;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    animation: slideIn 0.5s ease-out;
+}
+
+th {
+    background: linear-gradient(45deg, #270071, #7200ca);
+    color: #fff;
+    animation: gradientBG 3s infinite;
+}
+
+td {
+    font-size: 16px;
+    color: #555;
+    position: relative;
+    animation: fadeInLeft 0.5s ease-out;
+}
+
+tr:hover {
+    background-color: #d1c4e9;
+    transition: background-color 0.3s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes underline {
+    0%, 100% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+}
+
+th::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background-color: #fff;
+    animation: underline 1s ease-in-out infinite;
+}
+
+tr:nth-child(even) {
+    background-color: #f3e5f5;
+    animation: fadeInUp 1s ease-out;
+}
+
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+}
+.snowflake {
+    position: fixed;
+    top: -10px;
+    z-index: 9999;
+    user-select: none;
+    pointer-events: none;
+    color: white;
+    font-size: 10px;
+    animation: fall linear infinite;
+  }
+  
+  @keyframes fall {
+    0% { transform: translateY(-10px) translateX(0); }
+    100% { transform: translateY(100vh) translateX(20px); }
+  }

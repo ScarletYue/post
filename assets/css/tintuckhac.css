@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e7deff;
+    margin: 0;
+    padding: 0;
+}
+
+.product-container {
+    float: right; 
+    width: 30%; 
+    max-width: 300px; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+    margin-right: 10%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(255, 0, 150, 0.3), rgba(0, 229, 255, 0.3));
+    z-index: -1;
+    transition: opacity 1s ease;
+    opacity: 0;
+    border-radius: 50%;
+    animation: rotate-bg 5s infinite linear;
+}
+
+@keyframes rotate-bg {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.product-container:hover::before {
+    opacity: 1;
+}
+
+.product-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product {
+    margin-bottom: 20px;
+    transition: transform 1.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product a {
+    text-decoration: none; 
+    color: #333;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.product a:hover {
+    color: #ff0096;
+}
+
+.product img {
+    width: 100%; 
+    border-radius: 5px; 
+    transition: transform 0.3s ease;
+}
+
+.product:hover img {
+    transform: scale(1.1);
+}
+
+.product h2 {
+    margin-top: 10px; 
+    font-size: 18px; 
+}
+
+.product p {
+    margin-top: 5px;
+    font-size: 14px; 
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        width: 90%;
+        margin-right: 5%;
+    }
+
+    .product {
+        width: 100%;
+    }
+}

@@ -1,0 +1,129 @@
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 10px;
+    font-size: 18px;
+    clear: both;
+  }
+  
+  .footer {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+  }
+  
+  .footer1 {
+    flex: 1; 
+    padding-right: 0; 
+    margin-bottom: 20px;
+  }
+  
+  .tieude {
+    font-weight: bold;
+  }
+  
+  .button-container {
+    flex: 0; 
+    width: 200px; 
+    height: 50px;
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center; 
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  
+  .button-container button {
+    width: 100%;
+    height: 50px;
+  }
+  
+  .footer2 {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .container2 {
+    max-width: 90%;
+    margin: 0 auto; 
+  }
+  
+  .footer1-info {
+    order: 1; 
+  }
+  
+  .register-info {
+    order: 2; 
+  }
+  
+  .logo2 {
+    width: 50px; 
+    height: auto;
+  }
+
+  .logo1 {
+    width: 150px; 
+    height: auto;
+  }
+  
+  .linklogo {
+    width: 200px;
+    height: auto;
+  }
+  
+  .map-container {
+    width: 100%;
+    max-width: 130%; 
+    flex: 1;
+    margin-left: 0;
+  }
+  
+  .map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  @keyframes phoneFloat {
+    0% {
+      transform: translateY(0);
+      box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.5);
+    }
+    50% {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.2);
+    }
+    100% {
+      transform: translateY(0);
+      box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.5);
+    }
+  }
+  
+  .phone-number {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #ffdcdc;
+    padding: 10px;
+    border-radius: 10px;
+    animation: phoneFloat 3s ease-in-out infinite; /* Hiệu ứng nổi lên và nổi xuống sau mỗi 3s */
+  }
+  
+  .phone-text {
+    text-decoration: none;
+    color: #2f0000;
+  }
+  
+  
